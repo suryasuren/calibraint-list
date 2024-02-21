@@ -59,18 +59,19 @@ const Sidebar = ({ categories, onFilterChange }: SidebarProps) => {
             listStyle: "none",
           }}
         >
-          {categories.map((category) => (
-            <li key={category.id} style={{ margin: "5px 0" }}>
-              <label>
-                <input
-                  type="checkbox"
-                  checked={selectedCategories.includes(category.id)}
-                  onChange={() => handleCategoryChange(category.id)}
-                />
-                {capitalizeFirstLetter(category.name)}
-              </label>
-            </li>
-          ))}
+          {categories.length > 0 &&
+            categories.map((category) => (
+              <li key={category.id} style={{ margin: "5px 0" }}>
+                <label>
+                  <input
+                    type="checkbox"
+                    checked={selectedCategories.includes(category.id)}
+                    onChange={() => handleCategoryChange(category.id)}
+                  />
+                  {capitalizeFirstLetter(category.name)}
+                </label>
+              </li>
+            ))}
 
           <h4>Filter by Price (In $)</h4>
 

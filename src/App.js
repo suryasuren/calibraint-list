@@ -185,7 +185,7 @@ function App() {
       <div style={{ display: "flex", flexDirection: "row" }}>
         <div>
           <Sidebar
-            categories={data.category}
+            categories={data.category ?? []}
             onFilterChange={handleFilterChange}
           />
         </div>
