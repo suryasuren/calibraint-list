@@ -1,7 +1,7 @@
 {
   "name": "calibraint-product",
   "version": "0.1.0",
-  "homepage": "./public/index.html",
+  "homepage": "index.html",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.1",
